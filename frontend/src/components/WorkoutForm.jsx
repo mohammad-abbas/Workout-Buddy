@@ -16,13 +16,16 @@ const WorkoutForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const workout = { title, load, reps, sets };
-    const response = await fetch("http://localhost:3001/api/workouts", {
-      method: "POST",
-      body: JSON.stringify(workout),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://workout-buddy-ubxr.onrender.com/api/workouts",
+      {
+        method: "POST",
+        body: JSON.stringify(workout),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const json = await response.json();
     if (!response.ok) {
       setError(json.message);

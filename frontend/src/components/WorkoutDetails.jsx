@@ -13,7 +13,7 @@ const [sets, setSets] = useState(Workout.sets);
 
   const handleDelete = async () => {
     const response = await fetch(
-      `http://localhost:3001/api/workouts/${Workout._id}`,
+      `https://workout-buddy-ubxr.onrender.com/api/workouts/${Workout._id}`,
       {
         method: "DELETE",
       }
@@ -27,7 +27,7 @@ const [sets, setSets] = useState(Workout.sets);
 
  const handleEdit = async () => {
    const response = await fetch(
-     `http://localhost:3001/api/workouts/${Workout._id}`,
+     `https://workout-buddy-ubxr.onrender.com/api/workouts/${Workout._id}`,
      {
        method: "PATCH",
        headers: {
